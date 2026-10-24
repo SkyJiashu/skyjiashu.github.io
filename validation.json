@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "all_expected_files_present": true,
+    "unique_html_ids": true,
+    "local_assets_resolve": true,
+    "anchor_targets_resolve": true,
+    "images_have_alt_text": true,
+    "new_tabs_have_noopener": true,
+    "no_private_project_names_in_html": true,
+    "old_decorative_panel_removed": true,
+    "metric_scope_retained": true,
+    "public_figure_hash_matches": true,
+    "javascript_syntax": true
+  },
+  "sha256": {
+    "index.html": "b90acbcb2d123ad0eb59cb8a15bd27b5341ae721c83c70a0ca37dc081aa3ca78",
+    "styles.css": "582c632a6f2b34c104bcea613fecc3fbfd2ac0483b9c69a17fb252736ab94f0c",
+    "script.js": "f366ba829de45b13ea077fbc28c7a282ce987e4516311b257dd38642bf7a909e",
+    "favicon.svg": "d21d2b1a5a3aa7b939fd2cc2bb2311ab1479aaf6a47f6f342660edd747074d2e",
+    ".nojekyll": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "README.md": "b207afc2fb9566e3b8eb0fc0decaf1cf13be32f594510be47c37880ad85d9717",
+    "ASSET-CREDITS.md": "2cf6869d5eb6ec1566811034f4ab90b0885cc68bf8b5bc6f7b670fe571462b19",
+    "assets/disentangleformer-architecture.jpg": "ae2d447353df63a164e9a43e587b6a2951cd184bff225707a9dfc01c51ece4ae"
+  },
+  "browser_testing": "Recorded separately; these are static/offline checks."
+}
