@@ -62,32 +62,32 @@
   {
     "id": "df-architecture",
     "label": "Figure 3 · Network architecture",
-    "full": "https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg",
-    "preview": "https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg",
+    "full": "assets/papers/df-architecture.jpg",
+    "preview": "assets/papers/df-architecture.jpg",
     "width": 1053,
     "height": 389,
     "source": "https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg",
-    "delivery": "external-arxiv"
+    "delivery": "local"
   },
   {
     "id": "df-pavia",
     "label": "Figure 1 · Pavia University classification maps",
-    "full": "https://arxiv.org/html/2512.04314v1/Img/CVPRPavia22.jpg",
-    "preview": "https://arxiv.org/html/2512.04314v1/Img/CVPRPavia22.jpg",
+    "full": "assets/papers/df-pavia.jpg",
+    "preview": "assets/papers/df-pavia.jpg",
     "width": 2508,
     "height": 2411,
     "source": "https://arxiv.org/html/2512.04314v1/Img/CVPRPavia22.jpg",
-    "delivery": "external-arxiv"
+    "delivery": "local"
   },
   {
     "id": "df-cca",
     "label": "Figure 2 · Canonical correlation analysis",
-    "full": "https://arxiv.org/html/2512.04314v1/Img/CVPRCCA.jpg",
-    "preview": "https://arxiv.org/html/2512.04314v1/Img/CVPRCCA.jpg",
+    "full": "assets/papers/df-cca.jpg",
+    "preview": "assets/papers/df-cca.jpg",
     "width": 2403,
     "height": 830,
     "source": "https://arxiv.org/html/2512.04314v1/Img/CVPRCCA.jpg",
-    "delivery": "external-arxiv"
+    "delivery": "local"
   },
   {
     "id": "mask-rotate-framework",

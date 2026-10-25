@@ -18,14 +18,15 @@
   <title>Jiashu Liao — AI Research & Engineering</title>
   <link rel="stylesheet" href="research.css?v=b857ee11c387">
   <script src="gallery.js?v=cca5fe89e718" defer></script>
+  <link rel="stylesheet" href="v4.css?v=276d914880b9">
 </head>
-<body>
+<body class="home-v4">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-row">
       <a class="wordmark" href="#home" aria-label="Jiashu Liao, home">JL<span class="wordmark-dot">.</span><span class="wordmark-name">Jiashu Liao</span></a>
       <nav id="main-navigation" aria-label="Main navigation">
-        <a href="#research">Research</a><a href="#engineering">Engineering</a><a href="#background">Background</a><a href="#contact">Contact</a>
+        <a href="#research">Research</a><a href="#engineering">Engineering</a><a href="#background">Background</a><a href="cv.html">CV</a><a href="#contact">Contact</a>
       </nav>
       <div class="header-controls">
         <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden>
@@ -38,27 +39,32 @@
 
   <main id="main">
     <section class="introduction shell" id="home" aria-labelledby="name">
-      <div class="intro-copy">
-        <p class="eyebrow">AI RESEARCH & ENGINEERING</p>
-        <h1 id="name">Jiashu Liao<span class="degree-label">PhD</span></h1>
-        <p class="intro-statement">Computer vision & multimodal learning.<br><em>From research ideas to evaluated systems.</em></p>
-        <p class="intro-bio">I'm a Research Associate at the <a href="https://www.gla.ac.uk/schools/computing/staff/jiashuliao/" target="_blank" rel="noopener noreferrer">University of Glasgow</a>, working on computer vision, multimodal learning, and vision-language models. I develop methods from research questions through implementation and evaluation.</p>
-        <p class="intro-bio secondary">My work spans long-video identity clustering, generative face recognition, and high-dimensional imaging. I hold a PhD in Computer Science from the University of Warwick.</p>
-        <div class="intro-links" aria-label="Professional links">
-          <a class="button" href="mailto:Jiashu.Liao@glasgow.ac.uk">Get in touch <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/SkyJiashu" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="https://dblp.org/pid/277/6191.html" target="_blank" rel="noopener noreferrer">Publications <span aria-hidden="true">↗</span></a>
-          <a href="https://www.gla.ac.uk/schools/computing/staff/jiashuliao/" target="_blank" rel="noopener noreferrer">University profile <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-      <aside class="research-index" aria-label="Research interests">
-        <p class="eyebrow">RESEARCH INTERESTS</p>
-        <div class="interest"><span class="index-number">01</span><div><h2>Vision & language</h2><p>Identity association in long videos.</p></div></div>
-        <div class="interest"><span class="index-number">02</span><div><h2>Learning representations</h2><p>Self-supervision, generative vision, and spectral–spatial modelling.</p></div></div>
-        <div class="interest"><span class="index-number">03</span><div><h2>Research engineering</h2><p>Implementation, evaluation, and inspectable AI workflows.</p></div></div>
-        <a class="index-link" href="#research">Selected work below <span aria-hidden="true">↓</span></a>
-      </aside>
-    </section>
+  <div class="intro-copy">
+    <p class="eyebrow">AI RESEARCH &amp; ENGINEERING</p>
+    <h1 id="name">Jiashu Liao<span class="degree-label">PhD</span></h1>
+    <p class="intro-statement">Computer vision &amp; multimodal AI.<br><em>From research to working systems.</em></p>
+    <p class="intro-bio">Research Associate at the <a href="https://www.gla.ac.uk/schools/computing/staff/jiashuliao/" target="_blank" rel="noopener noreferrer">University of Glasgow</a>, with a PhD from Warwick. I design, implement, and evaluate visual AI methods and research workflows.</p>
+    <ul class="intro-topics" aria-label="Research interests"><li>Vision–language models</li><li>Generative vision</li><li>Research engineering</li></ul>
+    <div class="intro-links" aria-label="Professional links">
+      <a class="button" href="cv.html">Selected CV <span aria-hidden="true">→</span></a>
+      <a href="mailto:Jiashu.Liao@glasgow.ac.uk">Email <span aria-hidden="true">↗</span></a>
+      <a href="https://www.linkedin.com/in/jiashu-liao-3b0a43149/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/SkyJiashu" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <aside class="spotlight" aria-labelledby="spotlight-title">
+    <div class="spotlight-heading"><span class="eyebrow">FEATURED RESEARCH</span><span class="spotlight-venue">ACM Multimedia 2026 · Accepted</span></div>
+    <h2 id="spotlight-title">VISTA</h2><p>Identity clustering in long videos, in one pass.</p>
+    <figure>
+      <a class="figure-open" href="assets/papers/vista-results.webp" data-figure data-caption="Controlled comparison with COFC on TBBT, Buffy and Sherlock, using the same detector, embeddings and evaluation protocol. Full results include the Sherlock ID_Acc trade-off." aria-label="Expand VISTA controlled-comparison results">
+        <span class="spotlight-plot-crop"><img src="assets/papers/vista-results.webp" alt="Cluster purity on TBBT, Buffy and Sherlock. Grey bars show COFC; teal bars show VISTA." width="2047" height="461" fetchpriority="high" decoding="async"></span>
+      </a>
+      <figcaption>Cluster purity · grey: COFC; teal: VISTA.<br>Detail of the original figure; select to see all metrics.</figcaption>
+    </figure>
+    <div class="spotlight-result"><strong>+22.79 <small style="font:13px var(--sans)">pp</small></strong><span>Buffy weighted cluster purity<br>87.39% vs. 64.60% matched COFC</span></div>
+    <a href="research/vista.html">Method, results &amp; limitations <span aria-hidden="true">→</span></a>
+  </aside>
+</section>
 
     <div class="shell update-line"><span class="eyebrow">LATEST</span><p><strong>VISTA</strong> accepted at ACM Multimedia 2026.</p><a href="https://eprints.gla.ac.uk/391990/" target="_blank" rel="noopener noreferrer">Publication record <span aria-hidden="true">↗</span></a></div>
 
@@ -72,7 +78,7 @@
           <p class="authors">Jiashu Liao, Joanne Garde-Hansen, Sanjay Sharma, Tanaya Guha</p>
           <p>Combining visual identity representations with selective semantic arbitration to resolve ambiguous track-to-cluster associations.</p>
           <details><summary>Method & contribution</summary><p>Designed, implemented, and evaluated the framework, combining visual similarity with semantic evidence in the online clustering workflow.</p></details>
-          <div class="paper-links"><a class="primary-paper-link" href="research/vista.html">Project & figures →</a><a href="https://eprints.gla.ac.uk/391990/" target="_blank" rel="noopener noreferrer">Publication record ↗</a><a href="https://doi.org/10.1145/3767308.3835422" target="_blank" rel="noopener noreferrer">DOI ↗</a></div>
+          <div class="paper-links"><a class="primary-paper-link" href="research/vista.html">Project & figures →</a><a href="https://eprints.gla.ac.uk/391990/" target="_blank" rel="noopener noreferrer">Publication record ↗</a><a href="https://github.com/SkyJiashu/VISTA" target="_blank" rel="noopener noreferrer">Code ↗</a></div>
         </div>
         <figure class="result-figure" aria-labelledby="result-caption">
           <figcaption id="result-caption"><span class="eyebrow">A CLOSER LOOK AT THE RESULTS</span><strong>Identity clustering on Buffy</strong><span>Weighted cluster purity · higher is better</span></figcaption>
@@ -90,18 +96,29 @@
       </a><figcaption><strong>Method overview</strong><span>Per-crop features, within-shot tracks, and inter-shot association. Symbolic Semantic Representation (SSR) stabilises noisy predictions; three-zone triage separates reject, arbitrate, and merge decisions.</span><small>Author-supplied VISTA figure · Liao, Garde-Hansen, Sharma & Guha, ACM MM 2026. <a href="https://doi.org/10.1145/3767308.3835422" target="_blank" rel="noopener noreferrer">Paper DOI ↗</a></small></figcaption>
     </figure>
       </article>
-<div class="research-grid"><article class="paper-card" aria-labelledby="disentangleformer-title"><a class="paper-image paper-image-v3" href="research/disentangleformer.html" aria-label="Explore DisentangleFormer"><img src="https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg" referrerpolicy="no-referrer" width="1053" height="389" alt="Original DisentangleFormer architecture with parallel channel and spatial Transformer streams, STE, and MS-FFN." loading="lazy" decoding="async"><span class="image-source">Figure 3 · Network architecture · explore figures →</span></a><div class="card-body"><div class="paper-meta"><span class="venue">PUBLIC PREPRINT · 2025</span><span>arXiv v1 · First author</span></div><h3 id="disentangleformer-title">DisentangleFormer</h3><p class="paper-subtitle">Spatial-Channel Decoupling for Multi-Channel Vision</p><p class="authors">Jiashu Liao, Pietro Liò, Marc de Kamps, Duygu Sarikaya</p><p>Parallel spatial-token and channel-token pathways for multi-channel imagery, with adaptive fusion and multi-scale processing.</p><div class="paper-links"><a class="primary-paper-link" href="research/disentangleformer.html">Project & figures →</a><a href="https://arxiv.org/abs/2512.04314" target="_blank" rel="noopener noreferrer">Preprint <span aria-hidden="true">↗</span></a></div></div></article><article class="paper-card" aria-labelledby="mask-rotate-title"><a class="paper-image paper-image-v3" href="research/mask-rotate.html" aria-label="Explore Mask Rotate / RMAGAN"><img src="assets/papers/mask-rotate-framework-preview.webp" srcset="assets/papers/mask-rotate-framework-preview.webp 960w, assets/papers/mask-rotate-framework.webp 1751w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 1000px) calc(100vw - 60px), 1060px" referrerpolicy="no-referrer" width="960" height="623" alt="Original Mask Rotate framework showing distinct Random Mask training and renderer-plus-RMAGAN-plus-DifFace inference paths." loading="lazy" decoding="async"><span class="image-source">Figure 1 · Training and testing · explore figures →</span></a><div class="card-body"><div class="paper-meta"><span class="venue">PATTERN RECOGNITION · 2025</span><span>Published · First &amp; corresponding author</span></div><h3 id="mask-rotate-title">Self-supervised Random Mask Attention GAN</h3><p class="paper-subtitle">Tackling pose-invariant face recognition</p><p class="authors">Jiashu Liao, Tanaya Guha, Victor Sanchez</p><p>Reformulates face frontalization as completion, using Random Mask training and landmark-guided attention.</p><div class="paper-links"><a class="primary-paper-link" href="research/mask-rotate.html">Project & figures →</a><a href="https://doi.org/10.1016/j.patcog.2024.111112" target="_blank" rel="noopener noreferrer">Journal article <span aria-hidden="true">↗</span></a></div></div></article></div>
+<div class="research-grid"><article class="paper-card" aria-labelledby="disentangleformer-title"><a class="paper-image paper-image-v3" href="research/disentangleformer.html" aria-label="Explore DisentangleFormer"><img src="assets/papers/df-architecture.jpg" referrerpolicy="no-referrer" width="1053" height="389" alt="Original DisentangleFormer architecture with parallel channel and spatial Transformer streams, STE, and MS-FFN." loading="lazy" decoding="async"><span class="image-source">Figure 3 · Network architecture · explore figures →</span></a><div class="card-body"><div class="paper-meta"><span class="venue">PUBLIC PREPRINT · 2025</span><span>arXiv v1 · First author</span></div><h3 id="disentangleformer-title">DisentangleFormer</h3><p class="paper-subtitle">Spatial-Channel Decoupling for Multi-Channel Vision</p><p class="authors">Jiashu Liao, Pietro Liò, Marc de Kamps, Duygu Sarikaya</p><p>Parallel spatial-token and channel-token pathways for multi-channel imagery, with adaptive fusion and multi-scale processing.</p><div class="paper-links"><a class="primary-paper-link" href="research/disentangleformer.html">Project & figures →</a><a href="https://arxiv.org/abs/2512.04314" target="_blank" rel="noopener noreferrer">Preprint <span aria-hidden="true">↗</span></a></div></div></article><article class="paper-card" aria-labelledby="mask-rotate-title"><a class="paper-image paper-image-v3" href="research/mask-rotate.html" aria-label="Explore Mask Rotate / RMAGAN"><img src="assets/papers/mask-rotate-framework-preview.webp" srcset="assets/papers/mask-rotate-framework-preview.webp 960w, assets/papers/mask-rotate-framework.webp 1751w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 1000px) calc(100vw - 60px), 1060px" referrerpolicy="no-referrer" width="960" height="623" alt="Original Mask Rotate framework showing distinct Random Mask training and renderer-plus-RMAGAN-plus-DifFace inference paths." loading="lazy" decoding="async"><span class="image-source">Figure 1 · Training and testing · explore figures →</span></a><div class="card-body"><div class="paper-meta"><span class="venue">PATTERN RECOGNITION · 2025</span><span>Published · First &amp; corresponding author</span></div><h3 id="mask-rotate-title">Self-supervised Random Mask Attention GAN</h3><p class="paper-subtitle">Tackling pose-invariant face recognition</p><p class="authors">Jiashu Liao, Tanaya Guha, Victor Sanchez</p><p>Reformulates face frontalization as completion, using Random Mask training and landmark-guided attention.</p><div class="paper-links"><a class="primary-paper-link" href="research/mask-rotate.html">Project & figures →</a><a href="https://doi.org/10.1016/j.patcog.2024.111112" target="_blank" rel="noopener noreferrer">Journal article <span aria-hidden="true">↗</span></a></div></div></article></div>
 <div class="publication-list"><div class="publication-list-title"><h3>Earlier selected publications</h3><a href="https://dblp.org/pid/277/6191.html" target="_blank" rel="noopener noreferrer">View DBLP <span aria-hidden="true">↗</span></a></div><article class="earlier-paper"><a class="earlier-thumbnail" href="research/frgan.html" aria-label="Explore FRGAN"><img src="assets/papers/frgan-framework-preview.webp" srcset="assets/papers/frgan-framework-preview.webp 960w, assets/papers/frgan-framework.webp 1371w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 1000px) calc(100vw - 60px), 1060px" referrerpolicy="no-referrer" width="960" height="394" alt="Original FRGAN block diagram showing the generator, pre-trained renderer, reconstruction loss, Random Swap, and discriminator." loading="lazy" decoding="async"></a><div><p class="venue">IEEE ICIP · 2022</p><h3><a href="research/frgan.html">Self-supervised Frontalization and Rotation GAN with Random Swap for Pose-invariant Face Recognition</a></h3><p class="authors">Jiashu Liao, Victor Sanchez, Tanaya Guha</p><p class="earlier-summary">Self-supervised frontalization with a rotate-back objective and parameter-free Random Swap augmentation.</p><div class="paper-links"><a href="research/frgan.html">Project & figures →</a><a href="https://doi.org/10.1109/ICIP46576.2022.9897944" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a></div></div></article><article class="earlier-paper"><a class="earlier-thumbnail" href="research/asn.html" aria-label="Explore Attention Selective Network"><img src="assets/papers/asn-network-preview.webp" srcset="assets/papers/asn-network-preview.webp 960w, assets/papers/asn-network.webp 1339w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 1000px) calc(100vw - 60px), 1060px" referrerpolicy="no-referrer" width="960" height="558" alt="Original ASN architecture with separate appearance and heatmap encoders, attention-selective blocks, discriminators, and identity feature extractor." loading="lazy" decoding="async"></a><div><p class="venue">IEEE ICIP · 2020</p><h3><a href="research/asn.html">Attention Selective Network for Face Synthesis and Pose-Invariant Face Recognition</a></h3><p class="authors">Jiashu Liao, Alex Kot, Tanaya Guha, Victor Sanchez</p><p class="earlier-summary">A supervised network combining face-image and landmark pathways with attention-selective blocks and adaptive symmetry.</p><div class="paper-links"><a href="research/asn.html">Project & figures →</a><a href="https://doi.org/10.1109/ICIP40778.2020.9190677" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a></div></div></article></div>
     </section>
 
     <section class="section engineering-section" id="engineering" aria-labelledby="engineering-title"><div class="shell">
-      <div class="section-heading"><div><p class="eyebrow">02 / OPEN-SOURCE WORK</p><h2 id="engineering-title">From method to implementation.</h2></div><p>Public tools and adaptations, with their scope made explicit.</p></div>
-      <div class="engineering-grid">
-        <article class="engineering-card"><span class="project-kind">AI WORKFLOWS / TOOLKIT</span><h3>Codex Loop Harness</h3><p>Role-based collaboration rules, templates, and project-initialisation scripts. Git-backed task records keep implementation, review, and integration traceable.</p><div class="project-tags"><span>Task ownership</span><span>Review boundaries</span><span>Git</span></div><p class="scope-note">A workflow toolkit, not a production-runtime claim.</p><a class="project-link" href="https://github.com/SkyJiashu/Codex_Loop_Harness" target="_blank" rel="noopener noreferrer">Explore repository <span aria-hidden="true">↗</span></a></article>
-        <article class="engineering-card"><span class="project-kind">COMPUTER VISION / ADAPTATION</span><h3>Real-Time Deep SORT</h3><p>A PyTorch tracking adaptation using multiprocessing to address camera-frame buffering, separating stream handling from model inference.</p><div class="project-tags"><span>Python</span><span>PyTorch</span><span>Multiprocessing</span></div><p class="scope-note">Built on existing Deep SORT work; upstream authors credited.</p><a class="project-link" href="https://github.com/SkyJiashu/Real_time_deep_sort_pytorch" target="_blank" rel="noopener noreferrer">Explore repository <span aria-hidden="true">↗</span></a></article>
-      </div>
-      <p class="tool-line"><span class="eyebrow">CORE TOOLS</span> Python · PyTorch · OpenCV · Git · Linux · Model evaluation</p>
-    </div></section>
+  <div class="section-heading"><div><p class="eyebrow">02 / OPEN-SOURCE WORK</p><h2 id="engineering-title">Engineering you can inspect.</h2></div><p>Public implementations and workflow artefacts, with the source behind each claim.</p></div>
+  <div class="engineering-grid">
+    <article class="engineering-card"><span class="project-kind">AI COLLABORATION / WORKFLOW TOOLKIT</span><h3>Codex Loop Harness</h3><p>Turn open-ended AI-assisted development into task-scoped work, with versioned handoffs and an explicit review-to-completion boundary.</p>
+      <ol class="evidence-flow" aria-label="Simplified workflow"><li><b>01 / SCOPE</b><strong>Task &amp; owner</strong></li><li><b>02 / BUILD</b><strong>Branch &amp; report</strong></li><li><b>03 / REVIEW</b><strong>Accept &amp; merge</strong></li></ol>
+      <dl class="evidence-points"><div><dt>Artefacts</dt><dd>Role rules, task-state definitions, report templates, and a PowerShell project initialiser.</dd></div><div><dt>Boundary</dt><dd><code>Submitted</code> is not <code>Completed</code>: review and merge are separate steps in the documented protocol.</dd></div></dl>
+      <div class="evidence-links"><a href="https://github.com/SkyJiashu/Codex_Loop_Harness/blob/main/06_%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%9C%BA%E4%B8%8E%E5%B7%A1%E6%A3%80%E8%A7%84%E5%88%99.md" target="_blank" rel="noopener noreferrer">State specification ↗</a><a href="https://github.com/SkyJiashu/Codex_Loop_Harness/blob/main/README.md" target="_blank" rel="noopener noreferrer">README &amp; setup ↗</a></div>
+      <p class="scope-note">A rules-and-scaffolding toolkit. No production adoption or independently benchmarked reliability claim.</p>
+      <a class="project-link" href="engineering/codex-loop-harness.html">Design &amp; evidence <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="engineering-card"><span class="project-kind">COMPUTER VISION / STREAM HANDLING</span><h3>Real-Time Deep SORT</h3><p>A PyTorch tracking adaptation that separates camera-frame acquisition from detection and tracking, addressing stale frames when capture outpaces inference.</p>
+      <ol class="evidence-flow" aria-label="Frame processing"><li><b>01 / CAPTURE</b><strong>Reader thread</strong></li><li><b>02 / SHARE</b><strong>Latest frame</strong></li><li><b>03 / TRACK</b><strong>YOLO + Deep SORT</strong></li></ol>
+      <dl class="evidence-points"><div><dt>Code</dt><dd><code>ipcamCapture</code> updates a shared frame from a background thread; the inference loop reads that frame.</dd></div><div><dt>Contribution</dt><dd>Stream-handling adaptation of ZQPei’s implementation; detector and tracker are credited to upstream work.</dd></div></dl>
+      <div class="evidence-links"><a href="https://github.com/SkyJiashu/Real_time_deep_sort_pytorch/blob/master/multi_processing_run.py" target="_blank" rel="noopener noreferrer">Capture &amp; inference code ↗</a><a href="https://github.com/SkyJiashu/Real_time_deep_sort_pytorch/blob/master/README.md" target="_blank" rel="noopener noreferrer">Attribution &amp; setup ↗</a></div>
+      <p class="scope-note">The source uses <code>threading.Thread</code>, despite the script/README naming. No measured latency improvement is claimed here.</p>
+      <a class="project-link" href="https://github.com/SkyJiashu/Real_time_deep_sort_pytorch" target="_blank" rel="noopener noreferrer">Explore repository <span aria-hidden="true">↗</span></a>
+    </article>
+  </div><p class="tool-line"><span class="eyebrow">CORE TOOLS</span> Python · PyTorch · OpenCV · Git · Linux · Model evaluation</p>
+</div></section>
 
     <section class="section shell" id="background" aria-labelledby="background-title">
       <div class="section-heading"><div><p class="eyebrow">03 / BACKGROUND</p><h2 id="background-title">Research across disciplines.</h2></div><p>Computer vision in media, medical imaging, and forensic research.</p></div>
@@ -112,7 +129,8 @@
       </div><aside class="education" aria-label="Education"><p class="eyebrow">EDUCATION</p><article><span class="dates">2018 — 2024</span><h3>PhD, Computer Science</h3><p>University of Warwick</p><p class="education-detail">Generative vision and pose-invariant face recognition.</p></article><article><span class="dates">2014 — 2018</span><h3>BSc, Computer Science</h3><p>Rutgers University–New Brunswick</p><p class="education-detail">Cum laude.</p></article></aside></div>
     </section>
 
-    <section class="contact shell" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">04 / CONNECT</p><h2 id="contact-title">Let's talk about<br><em>research and building.</em></h2><p>Applied AI, computer vision, multimodal systems, and research engineering.</p></div><div class="contact-links"><a class="email-link" href="mailto:Jiashu.Liao@glasgow.ac.uk">Jiashu.Liao@glasgow.ac.uk <span aria-hidden="true">↗</span></a><a href="https://github.com/SkyJiashu" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.gla.ac.uk/schools/computing/staff/jiashuliao/" target="_blank" rel="noopener noreferrer">University profile ↗</a></div></section>
+<aside class="shell recruitment-note" aria-label="Recruitment and collaboration"><p><strong>Research depth. Engineering ownership.</strong><br>For applied AI, computer vision and research-engineering conversations, see the selected CV or get in touch.</p><a href="cv.html">View selected CV →</a></aside>
+    <section class="contact shell" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">04 / CONNECT</p><h2 id="contact-title">Let's talk about<br><em>research and building.</em></h2><p>Applied AI, computer vision, multimodal systems, and research engineering.</p></div><div class="contact-links"><a class="email-link" href="mailto:Jiashu.Liao@glasgow.ac.uk">Jiashu.Liao@glasgow.ac.uk <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/jiashu-liao-3b0a43149/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="cv.html">Selected CV →</a><a href="https://github.com/SkyJiashu" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.gla.ac.uk/schools/computing/staff/jiashuliao/" target="_blank" rel="noopener noreferrer">University profile ↗</a></div></section>
   </main>
   <footer class="shell footer"><span>© <span id="year">2026</span> Jiashu Liao</span><span>Content reviewed · October 2026</span><a href="#home">Back to top ↑</a></footer>
 </body>

@@ -209,3 +209,16 @@ Source: `Attention_Selective_Network_For_Face_Synthesis_And_Pose-Invariant_Face_
 Web reference: `assets/papers/asn-results.webp`
 
 Original profile inputs, frontal ground truth, ASN, CAPGGAN, and TPGAN outputs. Every labelled pose column and method row is retained.
+
+
+## V4 changes
+
+V3 author-supplied figure sources and rights notices are retained. The spotlight shows the WCP panel of the original VISTA figure using CSS; the full figure remains available. No scientific labels or values were changed.
+
+The following author-associated public arXiv v1 images are cached unchanged locally; caching is not a new reuse licence:
+
+- assets/papers/df-architecture.jpg — https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg — SHA256 ae2d447353df63a164e9a43e587b6a2951cd184bff225707a9dfc01c51ece4ae
+- assets/papers/df-pavia.jpg — https://arxiv.org/html/2512.04314v1/Img/CVPRPavia22.jpg — SHA256 8b3d426d12674fc51e37c081bf691bd650547f9b272efa16d051a9f5ca3d56e2
+- assets/papers/df-cca.jpg — https://arxiv.org/html/2512.04314v1/Img/CVPRCCA.jpg — SHA256 699018b079e1c3987a11f154d13d19311b273d862ceafc083abe76dd2df4498e
+
+The Deep SORT source uses threading.Thread; the portfolio distinguishes this implementation from the README multiprocessing wording. The engineering state chart is a text-based summary of the public workflow specification, not a live runtime or benchmark.

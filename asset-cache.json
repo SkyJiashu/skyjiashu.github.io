@@ -1,0 +1,20 @@
+[
+  {
+    "file": "assets/papers/df-architecture.jpg",
+    "source": "https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg",
+    "sha256": "ae2d447353df63a164e9a43e587b6a2951cd184bff225707a9dfc01c51ece4ae",
+    "bytes": 92891
+  },
+  {
+    "file": "assets/papers/df-pavia.jpg",
+    "source": "https://arxiv.org/html/2512.04314v1/Img/CVPRPavia22.jpg",
+    "sha256": "8b3d426d12674fc51e37c081bf691bd650547f9b272efa16d051a9f5ca3d56e2",
+    "bytes": 2207134
+  },
+  {
+    "file": "assets/papers/df-cca.jpg",
+    "source": "https://arxiv.org/html/2512.04314v1/Img/CVPRCCA.jpg",
+    "sha256": "699018b079e1c3987a11f154d13d19311b273d862ceafc083abe76dd2df4498e",
+    "bytes": 285064
+  }
+]

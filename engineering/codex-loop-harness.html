@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="Public workflow rules, task-state boundaries and source artefacts for AI-assisted development.">
+  <meta name="author" content="Jiashu Liao">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Codex Loop Harness: design &amp; evidence | Jiashu Liao">
+  <meta property="og:description" content="Public workflow rules, task-state boundaries and source artefacts for AI-assisted development.">
+  <meta property="og:url" content="https://skyjiashu.github.io/engineering/codex-loop-harness.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://skyjiashu.github.io/engineering/codex-loop-harness.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css?v=582c632a6f2b">
+  <script src="../script.js?v=f366ba829de4" defer></script>
+  <title>Codex Loop Harness: design &amp; evidence — Jiashu Liao</title>
+  <link rel="stylesheet" href="../research.css?v=b857ee11c387">
+  <script src="../gallery.js?v=cca5fe89e718" defer></script>
+  <link rel="stylesheet" href="../v4.css?v=276d914880b9">
+</head>
+<body class="paper-page evidence-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header">
+    <div class="shell header-row">
+      <a class="wordmark" href="../index.html#home" aria-label="Jiashu Liao, home">JL<span class="wordmark-dot">.</span><span class="wordmark-name">Jiashu Liao</span></a>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <a href="../index.html#research">Research</a><a href="../index.html#engineering">Engineering</a><a href="../index.html#background">Background</a><a href="../cv.html">CV</a><a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.2 15.8A8.6 8.6 0 0 1 8.2 3.8 8.7 8.7 0 1 0 20.2 15.8Z"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-button menu-button" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header><main id="main" class="shell evidence-page">
+ <div class="breadcrumb"><a href="../index.html#engineering">← Engineering</a><span>Public project / design notes</span></div>
+ <section class="paper-intro"><p class="eyebrow">CODEX LOOP HARNESS</p><h1>Make the work<br>reviewable.</h1><p class="paper-full-title">Task-scoped AI collaboration, with explicit ownership and recorded evidence.</p><p class="paper-lead">A public collection of collaboration rules, templates and project-initialisation scripts. It defines how architecture, coordination and implementation roles hand work over, and which artefacts support acceptance.</p><div class="paper-actions"><a class="button" href="https://github.com/SkyJiashu/Codex_Loop_Harness" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></section>
+ <section class="paper-section"><h2>The engineering problem</h2><div class="section-body"><p>A conversation saying “done” is not the same as an inspected change. The toolkit makes Git, task records and reports the documented sources of truth, rather than relying on chat history alone.</p></div>
+ <div class="case-grid" style="margin-top:23px"><article class="case-panel"><h3>Separate responsibilities</h3><p>The documented roles distinguish architecture decisions, coordination and acceptance, and task-specific implementation. Changes and review outcomes remain attached to identifiable work.</p></article><article class="case-panel"><h3>Make completion explicit</h3><p>The task specification separates submission, review, rework and completion. A completed task means the review has passed and the change has been merged, not merely that an implementation session has stopped.</p></article></div></section>
+ <section class="paper-section"><h2>A task’s normal path</h2><ol class="state-flow" aria-label="Normal task-state transitions"><li>Pending</li><li>Ready</li><li>Dispatched</li><li>Acknowledged</li><li>InProgress</li><li>Submitted</li><li>InReview</li><li>Completed</li></ol><div class="section-body"><p>Rework loops through implementation and review. Blocked or repeatedly failing work follows a documented escalation path. This is a summary of the repository’s protocol, not a claim that a hosted service enforces every transition.</p></div><p class="code-note">coordination/tasks/*.json &nbsp; + &nbsp; reports/ &nbsp; + &nbsp; Git history</p></section>
+ <section class="paper-section"><h2>Inspect the evidence</h2><ul class="source-links"><li><a href="https://github.com/SkyJiashu/Codex_Loop_Harness/blob/main/README.md" target="_blank" rel="noopener noreferrer">Repository overview and project initialiser ↗</a><small>Role definitions, directory layout, source-of-truth rules and the documented setup command.</small></li><li><a href="https://github.com/SkyJiashu/Codex_Loop_Harness/blob/main/06_%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%9C%BA%E4%B8%8E%E5%B7%A1%E6%A3%80%E8%A7%84%E5%88%99.md" target="_blank" rel="noopener noreferrer">Task state machine and review protocol ↗</a><small>Authoritative states, transition paths, submission handling and stop conditions.</small></li></ul></section>
+ <section class="paper-section"><h2>Scope &amp; limitations</h2><div class="section-body"><p>This is a rules-and-scaffolding toolkit, not a commercial orchestration platform. The public materials describe the intended workflow; they do not establish production adoption, unattended-operation guarantees or benchmarked reliability. Runtime enforcement depends on the implementation that uses these rules.</p></div></section>
+ <div class="related-work"><a href="../index.html#engineering">← All engineering work</a><a href="../cv.html">Selected CV →</a></div>
+</main><footer class="shell footer"><span>© <span id="year">2026</span> Jiashu Liao</span><a href="../index.html">Portfolio home ↑</a></footer></body></html>
