@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="Self-supervised frontalization with a rotate-back objective and parameter-free Random Swap augmentation.">
+  <meta name="author" content="Jiashu Liao">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FRGAN | Jiashu Liao">
+  <meta property="og:description" content="Self-supervised frontalization with a rotate-back objective and parameter-free Random Swap augmentation.">
+  <meta property="og:url" content="https://skyjiashu.github.io/research/frgan.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://skyjiashu.github.io/research/frgan.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css?v=582c632a6f2b">
+  <script src="../script.js?v=f366ba829de4" defer></script>
+  <title>FRGAN — Jiashu Liao</title>
+  <link rel="stylesheet" href="../research.css?v=b857ee11c387">
+  <script src="../gallery.js?v=cca5fe89e718" defer></script>
+</head>
+<body class="paper-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="wordmark" href="../index.html#home" aria-label="Jiashu Liao, home">JL<span class="wordmark-dot">.</span><span class="wordmark-name">Jiashu Liao</span></a>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <a href="../index.html#research">Research</a><a href="../index.html#engineering">Engineering</a><a href="../index.html#background">Background</a><a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.2 15.8A8.6 8.6 0 0 1 8.2 3.8 8.7 8.7 0 1 0 20.2 15.8Z"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-button menu-button" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html#research">← Selected research</a><span aria-current="page">FRGAN</span></nav>
+    <header class="paper-intro" id="top"><p class="eyebrow">IEEE ICIP · 2022</p><h1>FRGAN</h1><p class="paper-full-title">Self-supervised Frontalization and Rotation GAN with Random Swap for Pose-invariant Face Recognition</p><p class="paper-authors">Jiashu Liao, Victor Sanchez, Tanaya Guha</p><div class="paper-status"><span>Published · First author</span><span>Self-supervision · Face frontalization · Random Swap</span></div><p class="paper-lead">FRGAN generates a frontal view without supervision from the matching frontal image. The result is rotated back towards the input pose for reconstruction and adversarial training. Random Swap exchanges facial regions between the input and reconstructed images before discrimination.</p><div class="paper-actions"><a href="https://doi.org/10.1109/ICIP46576.2022.9897944" target="_blank" rel="noopener noreferrer">Paper DOI <span aria-hidden="true">↗</span></a> · <a href="https://eprints.gla.ac.uk/276935/" target="_blank" rel="noopener noreferrer">Accepted manuscript <span aria-hidden="true">↗</span></a></div></header>
+    <nav class="paper-toc" aria-label="On this page"><a href="#method">Method</a><a href="#results">Visual comparison</a><a href="#ablation">Ablation</a></nav>
+    <section class="paper-section" id="method" aria-labelledby="heading-method"><div class="paper-section-heading"><span class="section-number">01</span><h2 id="heading-method">Method</h2></div><div class="section-body"><p>The generator decomposes pose, illumination, depth, and texture to synthesise a frontal view. A pre-trained renderer rotates that view back to form a self-supervised reconstruction target.</p><p><strong>Random Swap is not Random Mask.</strong> Here, regions are exchanged between the real and reconstructed images; the later Mask Rotate work uses a different training formulation.</p><figure class="research-figure " id="frgan-framework">
+      <a class="figure-open" href="../assets/papers/frgan-framework.webp" data-figure data-caption="Figure 1 · FRGAN framework. Frontalization, pre-trained rotation, and discrimination. Independent Random Swap operations are applied to eye, nose, and mouth regions before the discriminator." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 1 · FRGAN framework">
+        <img src="../assets/papers/frgan-framework-preview.webp" srcset="../assets/papers/frgan-framework-preview.webp 960w, ../assets/papers/frgan-framework.webp 1371w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 1000px) calc(100vw - 60px), 1060px" referrerpolicy="no-referrer" width="960" height="394" alt="Original FRGAN block diagram showing the generator, pre-trained renderer, reconstruction loss, Random Swap, and discriminator." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 1 · FRGAN framework</strong><span>Frontalization, pre-trained rotation, and discrimination. Independent Random Swap operations are applied to eye, nose, and mouth regions before the discriminator.</span><small>Liao, Sanchez & Guha · ICIP 2022 · © 2022 IEEE. Extracted from the author-accepted manuscript. <a href="https://doi.org/10.1109/ICIP46576.2022.9897944" target="_blank" rel="noopener noreferrer">Source paper ↗</a></small></figcaption>
+    </figure></div></section><section class="paper-section" id="results" aria-labelledby="heading-results"><div class="paper-section-heading"><span class="section-number">02</span><h2 id="heading-results">Visual comparison</h2></div><div class="section-body"><p>The original LFW figure compares face-frontalization results after training on CASIA-WebFace. It is reproduced as a complete comparison rather than cropping away the competing methods.</p><figure class="research-figure " id="frgan-lfw">
+      <a class="figure-open" href="../assets/papers/frgan-lfw.webp" data-figure data-caption="Figure 2 · LFW visual results. The original method comparison; each row represents one example identity and all baseline labels are retained." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 2 · LFW visual results">
+        <img src="../assets/papers/frgan-lfw-preview.webp" referrerpolicy="no-referrer" width="911" height="321" alt="Original LFW comparison of input, labelled baseline methods, and FRGAN output." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 2 · LFW visual results</strong><span>The original method comparison; each row represents one example identity and all baseline labels are retained.</span><small>Liao, Sanchez & Guha · ICIP 2022 · © 2022 IEEE. Extracted from the author-accepted manuscript. <a href="https://doi.org/10.1109/ICIP46576.2022.9897944" target="_blank" rel="noopener noreferrer">Source paper ↗</a></small></figcaption>
+    </figure></div></section><section class="paper-section" id="ablation" aria-labelledby="heading-ablation"><div class="paper-section-heading"><span class="section-number">03</span><h2 id="heading-ablation">Ablation</h2></div><div class="section-body"><p>The ablation isolates Random Swap within FRGAN. The displayed images illustrate its effect; the paper reports the corresponding quantitative evaluation separately in Table 1.</p><figure class="research-figure " id="frgan-ablation">
+      <a class="figure-open" href="../assets/papers/frgan-ablation.webp" data-figure data-caption="Figure 3 · Random Swap ablation. Rows show the input, frontalization without Random Swap, and frontalization with Random Swap, respectively." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 3 · Random Swap ablation">
+        <img src="../assets/papers/frgan-ablation-preview.webp" srcset="../assets/papers/frgan-ablation-preview.webp 960w, ../assets/papers/frgan-ablation.webp 1101w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 1000px) calc(100vw - 60px), 1060px" referrerpolicy="no-referrer" width="960" height="262" alt="Original three-row LFW Random Swap ablation with input and without/with Random Swap results." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 3 · Random Swap ablation</strong><span>Rows show the input, frontalization without Random Swap, and frontalization with Random Swap, respectively.</span><small>Liao, Sanchez & Guha · ICIP 2022 · © 2022 IEEE. Extracted from the author-accepted manuscript. <a href="https://doi.org/10.1109/ICIP46576.2022.9897944" target="_blank" rel="noopener noreferrer">Source paper ↗</a></small></figcaption>
+    </figure></div></section>
+    <aside class="source-note"><h2>Source & figure provenance</h2><p>Figures 1–3 are extracted from the supplied author-accepted manuscript (276935.pdf). The repository cover is not part of the paper page numbering. Author order follows the paper title page: Liao, Sanchez, Guha. © 2022 IEEE; figure rights remain with the original rights holders. The full licensed PDF is not redistributed in this website bundle.</p><p><a href="https://doi.org/10.1109/ICIP46576.2022.9897944" target="_blank" rel="noopener noreferrer">Paper DOI <span aria-hidden="true">↗</span></a> · <a href="https://eprints.gla.ac.uk/276935/" target="_blank" rel="noopener noreferrer">Accepted manuscript <span aria-hidden="true">↗</span></a></p><p>Figures retain their original labels and results. Click a figure to enlarge it. Image resizing is for display only; no generative editing or reconstructed experimental results are used.</p></aside>
+    <nav class="related-work" aria-label="More research"><p class="eyebrow">MORE RESEARCH</p><div><a href="vista.html">VISTA <span aria-hidden="true">→</span></a><a href="disentangleformer.html">DisentangleFormer <span aria-hidden="true">→</span></a><a href="mask-rotate.html">Mask Rotate / RMAGAN <span aria-hidden="true">→</span></a><a href="asn.html">Attention Selective Network <span aria-hidden="true">→</span></a></div></nav>
+  </main>
+  <footer class="shell footer"><span>© <span id="year">2026</span> Jiashu Liao</span><a href="../index.html#research">Back to research</a><a href="#top">Back to top ↑</a></footer>
+</body></html>

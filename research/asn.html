@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="A supervised network combining face-image and landmark pathways with attention-selective blocks and adaptive symmetry.">
+  <meta name="author" content="Jiashu Liao">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Attention Selective Network | Jiashu Liao">
+  <meta property="og:description" content="A supervised network combining face-image and landmark pathways with attention-selective blocks and adaptive symmetry.">
+  <meta property="og:url" content="https://skyjiashu.github.io/research/asn.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://skyjiashu.github.io/research/asn.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css?v=582c632a6f2b">
+  <script src="../script.js?v=f366ba829de4" defer></script>
+  <title>Attention Selective Network — Jiashu Liao</title>
+  <link rel="stylesheet" href="../research.css?v=b857ee11c387">
+  <script src="../gallery.js?v=cca5fe89e718" defer></script>
+</head>
+<body class="paper-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="wordmark" href="../index.html#home" aria-label="Jiashu Liao, home">JL<span class="wordmark-dot">.</span><span class="wordmark-name">Jiashu Liao</span></a>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <a href="../index.html#research">Research</a><a href="../index.html#engineering">Engineering</a><a href="../index.html#background">Background</a><a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.2 15.8A8.6 8.6 0 0 1 8.2 3.8 8.7 8.7 0 1 0 20.2 15.8Z"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-button menu-button" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html#research">← Selected research</a><span aria-current="page">Attention Selective Network</span></nav>
+    <header class="paper-intro" id="top"><p class="eyebrow">IEEE ICIP · 2020</p><h1>Attention Selective Network</h1><p class="paper-full-title">Attention Selective Network for Face Synthesis and Pose-Invariant Face Recognition</p><p class="paper-authors">Jiashu Liao, Alex Kot, Tanaya Guha, Victor Sanchez</p><div class="paper-status"><span>Published · First author</span><span>Supervised learning · Attention · Pose-invariant recognition</span></div><p class="paper-lead">ASN uses separate encoders for image appearance and pose-landmark heatmaps. Attention Selective Blocks fuse these signals, while an adaptive symmetry loss accounts for pose-dependent self-occlusion without forcing perfect symmetry in every case.</p><div class="paper-actions"><a href="https://doi.org/10.1109/ICIP40778.2020.9190677" target="_blank" rel="noopener noreferrer">Paper DOI <span aria-hidden="true">↗</span></a></div></header>
+    <nav class="paper-toc" aria-label="On this page"><a href="#architecture">Architecture</a><a href="#symmetry">Adaptive symmetry</a><a href="#results">Visual results</a></nav>
+    <section class="paper-section" id="architecture" aria-labelledby="heading-architecture"><div class="paper-section-heading"><span class="section-number">01</span><h2 id="heading-architecture">Architecture</h2></div><div class="section-body"><p>ASN combines a GAN with separate appearance and topology encoders, Attention Selective Blocks, and an identity feature extractor. It is trained with frontal-view ground truth.</p><figure class="research-figure " id="asn-network">
+      <a class="figure-open" href="../assets/papers/asn-network.webp" data-figure data-caption="Figure 1 · Attention Selective Network. Two generator encoders process appearance and pose heatmaps. Attention Selective Blocks combine the pathways; pose and image discriminators provide complementary signals." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 1 · Attention Selective Network">
+        <img src="../assets/papers/asn-network-preview.webp" srcset="../assets/papers/asn-network-preview.webp 960w, ../assets/papers/asn-network.webp 1339w" sizes="(max-width: 540px) calc(100vw - 36px), (max-width: 1000px) calc(100vw - 60px), 1060px" referrerpolicy="no-referrer" width="960" height="558" alt="Original ASN architecture with separate appearance and heatmap encoders, attention-selective blocks, discriminators, and identity feature extractor." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 1 · Attention Selective Network</strong><span>Two generator encoders process appearance and pose heatmaps. Attention Selective Blocks combine the pathways; pose and image discriminators provide complementary signals.</span><small>Liao, Kot, Guha & Sanchez · ICIP 2020 · © 2020 IEEE. <a href="https://doi.org/10.1109/ICIP40778.2020.9190677" target="_blank" rel="noopener noreferrer">Source paper ↗</a></small></figcaption>
+    </figure></div></section><section class="paper-section" id="symmetry" aria-labelledby="heading-symmetry"><div class="paper-section-heading"><span class="section-number">02</span><h2 id="heading-symmetry">Adaptive symmetry</h2></div><div class="section-body"><p>The symmetry term depends on the input pose angle. It increases the penalty for a lack of symmetry when the observed profile contains less frontal-view information.</p><figure class="research-figure " id="asn-symmetry">
+      <a class="figure-open" href="../assets/papers/asn-symmetry.webp" data-figure data-caption="Figure 2 · Adaptive symmetry motivation. The schematic relates the visible width of a rotated face to its frontal width. It motivates the pose-dependent weighting of the adaptive symmetry loss." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 2 · Adaptive symmetry motivation">
+        <img src="../assets/papers/asn-symmetry-preview.webp" referrerpolicy="no-referrer" width="468" height="252" alt="Original geometric schematic illustrating face rotation, occlusion, the camera plane, and adaptive symmetry weighting." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 2 · Adaptive symmetry motivation</strong><span>The schematic relates the visible width of a rotated face to its frontal width. It motivates the pose-dependent weighting of the adaptive symmetry loss.</span><small>Liao, Kot, Guha & Sanchez · ICIP 2020 · © 2020 IEEE. <a href="https://doi.org/10.1109/ICIP40778.2020.9190677" target="_blank" rel="noopener noreferrer">Source paper ↗</a></small></figcaption>
+    </figure></div></section><section class="paper-section" id="results" aria-labelledby="heading-results"><div class="paper-section-heading"><span class="section-number">03</span><h2 id="heading-results">Visual results</h2></div><div class="section-body"><p>The original comparison includes synthesised frontal views from multiple profile angles. The evaluation is on the controlled pose dataset described in the paper; it is not a claim of generalisation to all in-the-wild conditions.</p><p>The paper also reports higher computational cost than its two compared supervised baselines. The visual examples therefore sit alongside, not in place of, the quantitative and cost analysis.</p><figure class="research-figure " id="asn-results">
+      <a class="figure-open" href="../assets/papers/asn-results.webp" data-figure data-caption="Figure 3 · Synthesis across pose angles. Original profile inputs, frontal ground truth, ASN, CAPGGAN, and TPGAN outputs. Every labelled pose column and method row is retained." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 3 · Synthesis across pose angles">
+        <img src="../assets/papers/asn-results-preview.webp" referrerpolicy="no-referrer" width="948" height="388" alt="Original pose-angle comparison grid showing inputs, ground truth, ASN, CAPGGAN, and TPGAN frontalization results." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 3 · Synthesis across pose angles</strong><span>Original profile inputs, frontal ground truth, ASN, CAPGGAN, and TPGAN outputs. Every labelled pose column and method row is retained.</span><small>Liao, Kot, Guha & Sanchez · ICIP 2020 · © 2020 IEEE. <a href="https://doi.org/10.1109/ICIP40778.2020.9190677" target="_blank" rel="noopener noreferrer">Source paper ↗</a></small></figcaption>
+    </figure></div></section>
+    <aside class="source-note"><h2>Source & figure provenance</h2><p>Figures 1–3 are extracted from the supplied IEEE ICIP 2020 paper. © 2020 IEEE. The full licensed PDF and its institutional download copy are not redistributed. Original axis, angle, and method labels are retained. This work is supervised, distinct from the later self-supervised methods.</p><p><a href="https://doi.org/10.1109/ICIP40778.2020.9190677" target="_blank" rel="noopener noreferrer">Paper DOI <span aria-hidden="true">↗</span></a></p><p>Figures retain their original labels and results. Click a figure to enlarge it. Image resizing is for display only; no generative editing or reconstructed experimental results are used.</p></aside>
+    <nav class="related-work" aria-label="More research"><p class="eyebrow">MORE RESEARCH</p><div><a href="vista.html">VISTA <span aria-hidden="true">→</span></a><a href="disentangleformer.html">DisentangleFormer <span aria-hidden="true">→</span></a><a href="mask-rotate.html">Mask Rotate / RMAGAN <span aria-hidden="true">→</span></a><a href="frgan.html">FRGAN <span aria-hidden="true">→</span></a></div></nav>
+  </main>
+  <footer class="shell footer"><span>© <span id="year">2026</span> Jiashu Liao</span><a href="../index.html#research">Back to research</a><a href="#top">Back to top ↑</a></footer>
+</body></html>

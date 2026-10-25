@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="Parallel spatial-token and channel-token pathways for multi-channel imagery, with adaptive fusion and multi-scale processing.">
+  <meta name="author" content="Jiashu Liao">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DisentangleFormer | Jiashu Liao">
+  <meta property="og:description" content="Parallel spatial-token and channel-token pathways for multi-channel imagery, with adaptive fusion and multi-scale processing.">
+  <meta property="og:url" content="https://skyjiashu.github.io/research/disentangleformer.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://skyjiashu.github.io/research/disentangleformer.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css?v=582c632a6f2b">
+  <script src="../script.js?v=f366ba829de4" defer></script>
+  <title>DisentangleFormer — Jiashu Liao</title>
+  <link rel="stylesheet" href="../research.css?v=b857ee11c387">
+  <script src="../gallery.js?v=cca5fe89e718" defer></script>
+</head>
+<body class="paper-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="wordmark" href="../index.html#home" aria-label="Jiashu Liao, home">JL<span class="wordmark-dot">.</span><span class="wordmark-name">Jiashu Liao</span></a>
+      <nav id="main-navigation" aria-label="Main navigation">
+        <a href="../index.html#research">Research</a><a href="../index.html#engineering">Engineering</a><a href="../index.html#background">Background</a><a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.2 15.8A8.6 8.6 0 0 1 8.2 3.8 8.7 8.7 0 1 0 20.2 15.8Z"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-button menu-button" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html#research">← Selected research</a><span aria-current="page">DisentangleFormer</span></nav>
+    <header class="paper-intro" id="top"><p class="eyebrow">PUBLIC PREPRINT · 2025</p><h1>DisentangleFormer</h1><p class="paper-full-title">Spatial-Channel Decoupling for Multi-Channel Vision</p><p class="paper-authors">Jiashu Liao, Pietro Liò, Marc de Kamps, Duygu Sarikaya</p><div class="paper-status"><span>arXiv v1 · First author</span><span>Transformers · Hyperspectral imaging · Representations</span></div><p class="paper-lead">Separate spatial and channel modelling, then fuse the complementary streams. The architecture combines parallel Transformer pathways, the Squeezed Token Enhancer (STE), and a Multi-Scale Feed-Forward Network (MS-FFN).</p><div class="paper-actions"><a href="https://arxiv.org/abs/2512.04314" target="_blank" rel="noopener noreferrer">Preprint <span aria-hidden="true">↗</span></a> · <a href="https://arxiv.org/html/2512.04314v1" target="_blank" rel="noopener noreferrer">Full text & figures <span aria-hidden="true">↗</span></a></div></header>
+    <nav class="paper-toc" aria-label="On this page"><a href="#architecture">Architecture</a><a href="#maps">Classification maps</a><a href="#representations">Representation analysis</a></nav>
+    <section class="paper-section" id="architecture" aria-labelledby="heading-architecture"><div class="paper-section-heading"><span class="section-number">01</span><h2 id="heading-architecture">Architecture</h2></div><div class="section-body"><p>Spatial-token and channel-token streams are modelled in parallel. Adaptive fusion and multi-scale local processing combine their outputs.</p><figure class="research-figure " id="df-architecture">
+      <a class="figure-open" href="https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg" data-figure data-caption="Figure 3 · Network architecture. Embedding is followed by parallel Channel Transformer and Spatial Transformer paths. STE fuses the streams before multi-scale processing." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 3 · Network architecture">
+        <img src="https://arxiv.org/html/2512.04314v1/Img/CVPRNewFigure.jpg" referrerpolicy="no-referrer" width="1053" height="389" alt="Original DisentangleFormer architecture with parallel channel and spatial Transformer streams, STE, and MS-FFN." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 3 · Network architecture</strong><span>Embedding is followed by parallel Channel Transformer and Spatial Transformer paths. STE fuses the streams before multi-scale processing.</span><small>Liao, Liò, de Kamps & Sarikaya · arXiv:2512.04314v1, 2025. <a href="https://arxiv.org/html/2512.04314v1" target="_blank" rel="noopener noreferrer">Original preprint ↗</a></small></figcaption>
+    </figure></div></section><section class="paper-section" id="maps" aria-labelledby="heading-maps"><div class="paper-section-heading"><span class="section-number">02</span><h2 id="heading-maps">Classification maps</h2></div><div class="section-body"><p>The Pavia University figure provides a qualitative view of the parallel-versus-serial ablation.</p><figure class="research-figure " id="df-pavia">
+      <a class="figure-open" href="https://arxiv.org/html/2512.04314v1/Img/CVPRPavia22.jpg" data-figure data-caption="Figure 1 · Pavia University classification maps. Original visual comparison of the parallel model with the SerialCTST and SerialSTCT alternatives." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 1 · Pavia University classification maps">
+        <img src="https://arxiv.org/html/2512.04314v1/Img/CVPRPavia22.jpg" referrerpolicy="no-referrer" width="2508" height="2411" alt="Original Pavia University classification-map comparison from DisentangleFormer Figure 1." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 1 · Pavia University classification maps</strong><span>Original visual comparison of the parallel model with the SerialCTST and SerialSTCT alternatives.</span><small>Liao, Liò, de Kamps & Sarikaya · arXiv:2512.04314v1, 2025. <a href="https://arxiv.org/html/2512.04314v1" target="_blank" rel="noopener noreferrer">Original preprint ↗</a></small></figcaption>
+    </figure></div></section><section class="paper-section" id="representations" aria-labelledby="heading-representations"><div class="paper-section-heading"><span class="section-number">03</span><h2 id="heading-representations">Representation analysis</h2></div><div class="section-body"><p>CCA is used as an empirical representation diagnostic. The information-theoretic motivation is an architectural design argument, not a formal proof of disentanglement.</p><figure class="research-figure " id="df-cca">
+      <a class="figure-open" href="https://arxiv.org/html/2512.04314v1/Img/CVPRCCA.jpg" data-figure data-caption="Figure 2 · Canonical correlation analysis. CCA plots compare the parallel architecture with the two serial baselines across three hyperspectral datasets." target="_blank" rel="noopener noreferrer" aria-label="Enlarge: Figure 2 · Canonical correlation analysis">
+        <img src="https://arxiv.org/html/2512.04314v1/Img/CVPRCCA.jpg" referrerpolicy="no-referrer" width="2403" height="830" alt="Original canonical-correlation scatter plots for DisentangleFormer and two serial baselines." loading="lazy" decoding="async"><span class="expand-hint" aria-hidden="true">View full size ↗</span>
+      </a><figcaption><strong>Figure 2 · Canonical correlation analysis</strong><span>CCA plots compare the parallel architecture with the two serial baselines across three hyperspectral datasets.</span><small>Liao, Liò, de Kamps & Sarikaya · arXiv:2512.04314v1, 2025. <a href="https://arxiv.org/html/2512.04314v1" target="_blank" rel="noopener noreferrer">Original preprint ↗</a></small></figcaption>
+    </figure></div></section>
+    <aside class="source-note"><h2>Source & figure provenance</h2><p>Figures and descriptions on this page refer specifically to arXiv:2512.04314v1. This work is presented as a public preprint, not as an accepted conference or journal article. Original figure labels and model names are retained.</p><p><a href="https://arxiv.org/abs/2512.04314" target="_blank" rel="noopener noreferrer">Preprint <span aria-hidden="true">↗</span></a> · <a href="https://arxiv.org/html/2512.04314v1" target="_blank" rel="noopener noreferrer">Full text & figures <span aria-hidden="true">↗</span></a></p><p>Figures retain their original labels and results. Click a figure to enlarge it. Image resizing is for display only; no generative editing or reconstructed experimental results are used.</p></aside>
+    <nav class="related-work" aria-label="More research"><p class="eyebrow">MORE RESEARCH</p><div><a href="vista.html">VISTA <span aria-hidden="true">→</span></a><a href="mask-rotate.html">Mask Rotate / RMAGAN <span aria-hidden="true">→</span></a><a href="frgan.html">FRGAN <span aria-hidden="true">→</span></a><a href="asn.html">Attention Selective Network <span aria-hidden="true">→</span></a></div></nav>
+  </main>
+  <footer class="shell footer"><span>© <span id="year">2026</span> Jiashu Liao</span><a href="../index.html#research">Back to research</a><a href="#top">Back to top ↑</a></footer>
+</body></html>

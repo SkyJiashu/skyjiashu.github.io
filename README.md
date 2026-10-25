@@ -1,48 +1,41 @@
-# Jiashu Liao — Research & Engineering Portfolio
+# Jiashu Liao — Research & Engineering Portfolio · V3
 
-Version 2: an evidence-led, responsive personal website. Static HTML, CSS and JavaScript; no framework, API credentials, tracking, external fonts or build service required at runtime.
+A static portfolio with five source-grounded research pages and real publication figures.
 
-## Preview
+## Deploy
 
-Open `index.html` in a browser, or run `python -m http.server 8000` from this directory and visit `http://localhost:8000`.
+Upload the CONTENTS of this folder to the root of `SkyJiashu/skyjiashu.github.io`.
+`index.html` must appear at the root, alongside `assets/` and `research/`.
+Keep GitHub Pages set to `main` / `/(root)`. Do not upload the outer release folder or the ZIP itself.
+The `.nojekyll` file is included; enable hidden files in your file picker if needed.
 
-## Deploy to the existing GitHub Pages site
+## Public website files
 
-Repository: `SkyJiashu/skyjiashu.github.io`.
+- `index.html`: portfolio homepage; original V2 biography, experience, education and engineering sections retained.
+- `styles.css`, `script.js`, `favicon.svg`: unchanged V2 base assets.
+- `research.css`, `gallery.js`: scoped research-page styles and accessible figure enlargement.
+- `research/`: VISTA, DisentangleFormer, Mask Rotate / RMAGAN, FRGAN, and ASN.
+- `assets/papers/`: 16 local source figures, each with a preview and a full-size lossless WebP.
+- `ASSET-CREDITS.md`: figure source, numbering and rights notices.
 
-Upload **all contents of this directory** into the repository root, keeping `assets/` as a subfolder. Replace the existing HTML, CSS, JavaScript, favicon and README. Include `.nojekyll`.
+## External images
 
-Keep the current Pages configuration: **Deploy from a branch → main → /(root)**. No repository rename or new hosting setup is needed.
+Three DisentangleFormer figures are referenced from the author's arXiv v1 source.
+They are NOT bundled in this deployment ZIP and need Internet access. Their original image URLs
+were retrieved successfully through the connected research workspace. Offline rendering shows a
+source-link fallback instead. All 16 images extracted from the supplied PDFs/PNGs are local.
+There are no remote font, JavaScript, CSS, analytics or tracking dependencies.
 
-After the deployment succeeds, check the page at https://skyjiashu.github.io/ and hard-refresh the browser if cached styles remain.
+The release includes no full institutional/publisher PDFs, no private research projects, no tokens
+and no 14-page master CV. Figure excerpts are supplied for the author's portfolio; IEEE notices
+are retained and are not replaced by a blanket open-source licence.
 
-## Files
+## Maintenance
 
-```text
-index.html
-styles.css
-script.js
-favicon.svg
-.nojekyll
-README.md
-ASSET-CREDITS.md
-assets/
-  disentangleformer-architecture.jpg
-```
+Use `Project & figures` to reach the corresponding research page. Images are lazy-loaded and
+can be enlarged with a mouse or keyboard. Escape closes the figure viewer and restores focus.
+Without JavaScript, figure links still open the image. CSS/JS references use content-hash
+query strings; update the version whenever the referenced asset changes.
 
-Only this site directory belongs in the public repository. The sibling `tools/` folder, local validation reports, and any private source records are not required for publication.
-
-## Editing
-
-- `index.html`: biography, research, authors, links, employment and education.
-- `styles.css`: editorial layout, responsive breakpoints, light/dark themes, print styles.
-- `script.js`: optional theme preference, mobile navigation and image-error fallback.
-- `ASSET-CREDITS.md`: figure provenance and source boundaries.
-
-The page remains readable and navigable with JavaScript disabled. Navigation closes on Escape, outside clicks and link activation; preferences failing to save do not block the site.
-
-## Content policy
-
-Only approved biography, research and public repository material is included. Published work, accepted papers and preprints are explicitly distinguished. The VISTA chart labels its dataset, metric, matched baseline and source scope. It does not imply improvements on every benchmark or end-to-end throughput claims.
-
-Do not add an unpublished project, private experiment logs, a master CV, an unverified code link, a generated portrait, or a synthetic research image as if it were measured evidence.
+The HTML, figures and captions are hand-curated; no experimental results were generated or
+retouched. See ASSET-CREDITS.md for image transformations and original sources.
